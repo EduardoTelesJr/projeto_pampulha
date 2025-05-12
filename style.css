@@ -1,0 +1,212 @@
+/* Layout básico */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #2d6a4f;
+  color: white;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+/* Filtros */
+.filters input, .filters select, .filters button {
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.filters input, .filters select {
+  width: 200px;
+}
+
+.filters button {
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #4cae4c;
+}
+
+/* Conteúdo principal com flexbox */
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Faz os itens quebrarem para a próxima linha, se necessário */
+  justify-content: flex-start; /* Ajusta para começar da esquerda */
+  gap: 20px; /* Define o espaço entre os itens */
+  margin: 20px;
+  padding: 10px;
+}
+
+/* Cartões de candidatos */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Tamanho fixo para os cartões */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(30px); /* Inicialmente, os cartões vão vir de baixo para cima */
+}
+
+/* Animação de entrada dos cartões */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #4cae4c;
+}
+
+/* Estilos do filtro */
+input, select, button {
+  transition: all 0.3s ease;
+}
+
+/* Filtro: aumenta levemente o tamanho e muda a cor de fundo quando o usuário interage */
+input:focus, select:focus, button:hover {
+  transform: scale(1.05);
+  background-color: #f1f1f1;
+  border-color: #5cb85c;
+}
+
+/* Animação no botão de busca */
+#searchBtn {
+  background-color: #5cb85c;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #4cae4c;
+  transform: translateY(-3px); /* Levanta o botão ao passar o mouse */
+}
+.details {
+  position: fixed;
+  top: 70px;
+  right: -320px; /* Começa fora da tela */
+  width: 300px;
+  height: calc(100% - 70px);
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #ddd;
+  overflow-y: auto;
+  display: none;
+  z-index: 100;
+  transition: right 0.3s ease;
+}
+
+.details.show-details {
+  right: 0; /* Animação entra deslizando */
+  display: block;
+}
+
+.details h2 {
+  margin-top: 0;
+  color: #2d6a4f;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.details p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+}
+
+#closeDetails {
+  background-color: #ccc;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#closeDetails:hover {
+  background-color: #999;
+}
+/* Foto do candidato */
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Botão de Ver Arquivo */
+#viewFileBtn {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#viewFileBtn:hover {
+  background-color: #218838;
+}
+
+/* Botão de Fechar em vermelho */
+#closeDetails {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#closeDetails:hover {
+  background-color: #c82333;
+}
+

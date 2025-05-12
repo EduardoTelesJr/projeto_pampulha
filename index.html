@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pampulha Engenharia - Filtro de Currículos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Pampulha Engenharia"> <!-- Logo -->
+    </div>
+    <div class="filters">
+      <input type="text" id="nameFilter" placeholder="Filtrar por nome">
+      <select id="roleFilter">
+        <option value="">Filtrar por função</option>
+        <option value="engenheiro">Engenheiro</option>
+        <option value="estagiario">Estagiário</option>
+        <option value="administrativo">Administrativo</option>
+      </select>
+      <input type="date" id="startDateFilter">
+      <input type="date" id="endDateFilter">
+      <button id="searchBtn">Buscar</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="cardContainer"></div> <!-- Onde os cartões vão aparecer -->
+
+    <!-- Detalhes do candidato -->
+   <div id="details" class="details">
+  <h2>Detalhes do Candidato</h2>
+  <p id="detailName"></p>
+  <p id="detailFunction"></p>
+  <p id="detailExperience"></p>
+  <p id="detailEducation"></p>
+  <p id="detailSkills"></p>
+  <button id="closeDetails">Fechar</button>
+</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<div id="details" class="details">
+  <h2>Detalhes do Candidato</h2>
+  
+  <img id="detailPhoto" src="https://via.placeholder.com/120" alt="Foto do Candidato" class="profile-photo">
+  
+  <p id="detailName"></p>
+  <p id="detailFunction"></p>
+  <p id="detailExperience"></p>
+  <p id="detailEducation"></p>
+  <p id="detailSkills"></p>
+
+  <button id="viewFileBtn">Ver Arquivo</button>
+  <button id="closeDetails">Fechar</button>
+</div>
